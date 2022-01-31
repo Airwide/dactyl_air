@@ -62,13 +62,14 @@
 #define SE_ACUT_MAC SE_ACUT
 #define SE_QUOT_MAC SE_LABK
 #define SE_BSLS_MAC LS(SE_LCBR)
-#define SE_DLR_MAC  SE_CURR
+#define SE_EURO_MAC  SE_CURR
 #define SE_GRV_MAC  SE_BSLS
 #define SE_GRTR_MAC SE_HALF
 #define SE_LCBR_MAC LS(SE_LBRC)
 #define SE_LESS_MAC SE_SECT
 #define SE_PIPE_MAC SE_LCBR
 #define SE_RCBR_MAC LS(SE_RBRC)
+#define SE_SECT_MAC SE_LABK
 
 &sl {
     release-after-ms = <3000>;
@@ -197,7 +198,7 @@
 */
         symbol_layer {
             bindings = <
-    &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_CURR  &kp SE_LABK                  &none        &kp SE_SLSH  &kp SE_BSLS  &kp SE_PIPE  &kp SE_EQL
+    &kp SE_EXLM  &kp SE_DQUO  &kp SE_HASH  &kp SE_EURO  &kp SE_SECT                  &none        &kp SE_SLSH  &kp SE_BSLS  &kp SE_PIPE  &kp SE_EQL
     &kp SE_QUOT  &kp SE_LCBR  &kp SE_LBRC  &kp SE_LPRN  &kp SE_PERC                  &kp SE_AMPR  &kp SE_RPRN  &kp SE_RBRC  &kp SE_RCBR  &kp SE_PLUS
     &kp SE_TILD  &kp SE_AT    &kp SE_PND   &kp SE_DLR   &kp SE_ACUT                  &kp SE_DIAE  &kp SE_QUES  &kp SE_LESS  &kp SE_GRTR  &kp SE_ASTR
                                      &trans     &trans   &trans   &trans   &trans     &trans    
@@ -218,9 +219,9 @@
 */
         symbol_mac_layer {
             bindings = <
-    &kp SE_EXLM  &kp SE_DQUO      &kp SE_HASH  &kp SE_CURR  &kp SE_LABK                  &none        &kp SE_SLSH  &kp SE_BSLS_MAC  &kp SE_PIPE_MAC  &kp SE_EQL
-    &kp SE_QUOT  &kp SE_LCBR_MAC  &kp SE_LBRC  &kp SE_LPRN  &kp SE_PERC                  &kp SE_AMPR  &kp SE_RPRN  &kp SE_RBRC      &kp SE_RCBR_MAC  &kp SE_PLUS
-    &kp SE_TILD  &kp SE_AT        &kp SE_PND   &kp SE_DLR   &kp SE_ACUT                  &kp SE_DIAE  &kp SE_QUES  &kp SE_LESS_MAC  &kp SE_GRTR_MAC  &kp SE_ASTR
+    &kp SE_EXLM  &kp SE_DQUO      &kp SE_HASH  &kp SE_EURO_MAC  &kp SE_SECT_MAC              &none        &kp SE_SLSH  &kp SE_BSLS_MAC  &kp SE_PIPE_MAC  &kp SE_EQL
+    &kp SE_QUOT  &kp SE_LCBR_MAC  &kp SE_LBRC  &kp SE_LPRN      &kp SE_PERC                  &kp SE_AMPR  &kp SE_RPRN  &kp SE_RBRC      &kp SE_RCBR_MAC  &kp SE_PLUS
+    &kp SE_TILD  &kp SE_AT        &kp SE_PND   &kp SE_DLR       &kp SE_ACUT                  &kp SE_DIAE  &kp SE_QUES  &kp SE_LESS_MAC  &kp SE_GRTR_MAC  &kp SE_ASTR
                                                     &trans     &trans   &trans   &trans   &trans     &trans    
             >;
         };
