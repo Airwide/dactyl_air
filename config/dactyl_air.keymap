@@ -233,11 +233,11 @@
 
 /* Numbers
          ┌─────┬─────┬─────┬─────┬─────┐                   ┌─────┬─────┬─────┬─────┬─────┐
-         | F1  | F2  | F3  | F4  | F5  |                   |  *  |  7  |  8  |  9  |  -  |
+         | F1  | F2  | F3  | F4  | F5  |                   |  *  |  7  |  8  |  9  |  =  |
          ├─────┼─────┼─────┼─────┼─────┤                   ├─────┼─────┼─────┼─────┼─────┤
          | F6  | F7  | F8  | F9  | F10 |                   |  /  |  4  |  5  |  6  |  +  |
          ├─────┼─────┼─────┼─────┼─────┤                   ├─────┼─────┼─────┼─────┼─────┤
-         | F11 | F12 |     |     |     |                   |  =  |  1  |  2  |  3  |Enter|
+         | F11 | F12 |     |     |     |                   |  .  |  1  |  2  |  3  |  -  |
          └─────┴─────┴─────┴─────┴─────┘                   └─────┴─────┴─────┴─────┴─────┘
                            ┌─────┬─────┬─────┐       ┌─────┬─────┬─────┐
                            |     |     |     |       |     |     |  0  |
@@ -245,9 +245,9 @@
 */
         number_layer {
             bindings = <
-    &kp F1  &kp F2    &kp F3  &kp F4  &kp F5                          &kp SE_ASTR  &kp N7  &kp N8  &kp N9  &kp SE_MINS 
+    &kp F1  &kp F2    &kp F3  &kp F4  &kp F5                          &kp SE_ASTR  &kp N7  &kp N8  &kp N9  &kp SE_EQL
     &kp F6  &kp F7    &kp F8  &kp F9  &kp F10                         &kp SE_BSLS  &kp N4  &kp N5  &kp N6  &kp SE_PLUS
-    &kp F11  &kp F12  &none   &none   &none                           &kp SE_EQL   &kp N1  &kp N2  &kp N3  &kp RET
+    &kp F11  &kp F12  &none   &none   &none                           &kp DOT      &kp N1  &kp N2  &kp N3  &kp SE_MINS
                                      &trans     &trans   &trans   &trans   &trans     &kp N0    
             >;
 	};
