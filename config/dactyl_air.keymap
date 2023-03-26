@@ -254,9 +254,9 @@
 
 /* Navigation
          ┌─────┬─────┬─────┬─────┬─────┐                   ┌─────┬─────┬─────┬─────┬─────┐
-         | ADJ |NumLk|ScrLk|BriUp|VolUp|                   |Home |PgDn |PgUp | End |But3 |
+         | ADJ |PrScn| Ins |BriUp|VolUp|                   |Home |PgDn |PgUp | End |But3 |
          ├─────┼─────┼─────┼─────┼─────┤                   ├─────┼─────┼─────┼─────┼─────┤
-         |CapLk|PrScn| Ins |BriDo|VolDo|                   |Left |Down | Up  |Right|But2 |
+         |     |     |     |BriDo|VolDo|                   |Left |Down | Up  |Right|But2 |
          ├─────┼─────┼─────┼─────┼─────┤                   ├─────┼─────┼─────┼─────┼─────┤
          |Pause|     |     |     |Mute |                   |MousL|MousD|MousU|MousR|But1 |
          └─────┴─────┴─────┴─────┴─────┘                   └─────┴─────┴─────┴─────┴─────┘
@@ -266,8 +266,8 @@
 */
         navigation_layer {
             bindings = <
-    &sl ADJUST       &kp KP_NUM  &kp SLCK  &kp C_BRI_UP  &kp C_VOL_UP		&kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
-    &kp CAPS         &kp PSCRN   &kp INS   &kp C_BRI_DN  &kp C_VOL_DN           &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
+    &sl ADJUST       &kp PSCRN   &kp INS &kp C_BRI_UP  &kp C_VOL_UP		&kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+    &none            &none       &none   &kp C_BRI_DN  &kp C_VOL_DN           &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
     &kp PAUSE_BREAK  &none       &none     &none         &kp K_MUTE             &none     &none      &none      &none      &none
                                      &trans     &caps_word   &trans   &trans   &trans     &trans
             >;
@@ -275,7 +275,7 @@
 
 /* Adjust
          ┌─────┬─────┬─────┬─────┬─────┐                   ┌─────┬─────┬─────┬─────┬─────┐
-         | BT0 | BT1 | BT2 | BT3 | BT4 |                   |     |     |     |     |     |
+         | BT0 | BT1 | BT2 | BT3 | BT4 |                   |CapLk|NumLk|ScrLk|     |     |
          ├─────┼─────┼─────┼─────┼─────┤                   ├─────┼─────┼─────┼─────┼─────┤
          | USB | BLE |     |Reset|Qw/Co|                   |Wi/Mc|Reset|     |     |     |
          ├─────┼─────┼─────┼─────┼─────┤                   ├─────┼─────┼─────┼─────┼─────┤
@@ -287,7 +287,7 @@
 */
         adjust_layer {
             bindings = <
-    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                   &none       &none     &none     &none     &none
+    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                   &kp CAPS    &kp KP_NUM &kp SLCK &none     &none
     &out OUT_USB &out OUT_BLE &none        &reset       &tog QWERTY                    &tog MAC    &reset    &none     &none     &none 
     &none        &bt BT_CLR   &none        &none        &bootloader                    &bootloader &none     &none     &none     &none 
                                                &none    &none       &none       &none     &none     &none    
