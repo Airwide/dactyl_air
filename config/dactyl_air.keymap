@@ -71,6 +71,14 @@
 #define SE_RCBR_MAC LS(SE_RBRC)
 #define SE_SECT_MAC SE_LABK
 
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <20>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <0>; \
+  };
+
 &sl {
     release-after-ms = <3000>;
 };
@@ -111,16 +119,10 @@
     };
     combos {
         compatible = "zmk,combos";
-        combo_aa {
-            timeout-ms = <60>;
-            key-positions = <7 8>;
-            bindings = <&kp SE_ARNG>;
-        };
-        combo_ae {
-            timeout-ms = <60>;
-            key-positions = <17 18>;
-            bindings = <&kp SE_ADIA>;
-        };
+        COMBO(aa, &kp SE_ARNG, 7 8)
+        COMBO(ae, &kp SE_ADIA, 17 18)
+        COMBO(esc, &kp ESC, 1 2)
+        COMBO(del, &kp DEL, 27 28)
      };
     keymap {
         compatible = "zmk,keymap";
